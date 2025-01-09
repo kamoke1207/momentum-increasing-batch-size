@@ -10,8 +10,6 @@ from training import train, test
 from utils import checkpoint, select_model, get_bs_scheduler, get_config_value, save_to_csv
 from utils.setup_optimizer import setup_optimizer
 
-
-
 # Command Line Argument
 def get_args():
     parser = argparse.ArgumentParser(description='PyTorch CIFAR100 Training with Schedulers')
