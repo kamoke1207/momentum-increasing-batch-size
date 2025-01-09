@@ -1,0 +1,12 @@
+{
+    "model": "resnet18",
+    "optimizer": "momentum",
+    "bs_method": "exp_growth",
+    "init_bs": 8,
+    "init_lr": 0.1,
+    "epochs": 200,
+    "incr_interval": 25,
+    "bs_growth_rate": 2.0,
+    "checkpoint_path": "checkpoint/tiny_momentum_incr_2.pth.tar",
+    "csv_path": "results/tiny/momentum/incr_2/"
+}

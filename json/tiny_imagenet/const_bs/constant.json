@@ -1,0 +1,10 @@
+{
+    "model": "resnet18",
+    "optimizer": "custom_momentum",
+    "bs_method": "constant",
+    "init_bs": 128,
+    "init_lr": 0.1,
+    "epochs": 200,
+    "checkpoint_path": "checkpoint/tiny_custom_momentum_constant_resnet18.pth.tar",
+    "csv_path": "results/tiny/custom_momentum/constant_resnet18/"
+}
