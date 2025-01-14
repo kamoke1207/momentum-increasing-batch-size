@@ -1,5 +1,6 @@
-Increasing Batch Size Improves Convergence of Stochastic Gradient Descent with Momentum
+# Increasing Batch Size Improves Convergence of Stochastic Gradient Descent with Momentum
 
+## Abstract
 Stochastic gradient descent with momentum (SGDM), which is defined by adding a momentum term to SGD, has been well studied in both theory and practice.
 Theoretically investigated results showed that the settings of the learning rate and momentum weight affect the convergence of SGDM. 
 Meanwhile, practical results showed that the setting of batch size strongly depends on the performance of SGDM. 
