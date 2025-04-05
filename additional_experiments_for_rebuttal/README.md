@@ -1,9 +1,15 @@
+Let $b$ be a batch size.
+The deep neural network model uses $b$ gradients of the loss function per step.
+Hence, when $T$ is the number of steps required to train a deep neural network, the model has a stochastic gradient computation cost of $Tb$.
+
+The quantity $Tb$ represents the total number of stochastic gradient calls, which we refer to as the Stochastic First-order Oracle (SFO) complexity.
+
 To address the reviewer’s concerns regarding the practicality of increasing batch size strategies under GPU memory constraints and the fairness of comparing different schedules under equal epoch counts, we conducted additional experiments focusing on gradient norm thresholds and test accuracy, evaluated under a fixed computational budget measured by stochastic gradient computations (SFO).
 In response to your suggestion that the paper would benefit from a more thorough evaluation of varying batch size strategies, we carefully designed experiments to provide a more realistic and performance-driven comparison between fixed and increasing batch size schedules.
 
 While we initially aimed to compare fixed and increasing batch size schedules under the same total gradient computation budget, we now instead focus on comparing the SFO complexity required for each method to reach a specified value of the full gradient norm during training. We believe this provides a more meaningful and performance-oriented evaluation.
 
-We conducted experiments under the following settings:
+We conducted the experiments using the CIFAR-100 dataset and focused on the NSHB optimizer only, while keeping all other training settings consistent with those described in the main paper. This design choice ensures that any observed differences in performance are due to batch size scheduling, rather than other confounding factors such as architecture or training hyperparameters. Specifically, we conducted experiments under the following settings:
 
 - For gradient norm threshold evaluation:
   - Fixed: batch size b = 8, Increasing: initial batch size = 8, doubling every 20 epochs
@@ -12,6 +18,8 @@ We conducted experiments under the following settings:
 - For test accuracy threshold evaluation:
   - Fixed: batch size b = 8, Increasing: initial batch size = 8, doubling every 20 epochs
   - Fixed: batch size b = 128, Increasing: initial batch size = 128, doubling every 25 epochs
+
+To reflect practical hardware limitations, we capped the maximum batch size at 1024 to simulate realistic GPU memory constraints. This ensures that our results remain applicable to real-world training environments.
 
 The results of these experiments are summarized in the two tables below.
 
