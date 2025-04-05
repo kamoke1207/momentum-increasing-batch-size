@@ -14,10 +14,10 @@ To address the reviewer’s concerns regarding the practicality of increasing ba
 ### 2.1 Focus of this Study
 In response to your questions regarding whether increasing batch size still offers advantages under a fixed computational budget—specifically in terms of empirical loss and test accuracy—we conducted additional experiments that compare fixed and increasing batch size strategies based on the SFO complexity required to reach specific gradient norm and accuracy thresholds.
 
-While we initially aimed to compare fixed and increasing batch size schedules under the same total gradient computation budget, we now instead focus on comparing the SFO complexity required for each method to reach a specified value of the full gradient norm during training. We believe this provides a more meaningful and performance-oriented evaluation.
+While we initially aimed to compare fixed and increasing batch size schedules under the same total gradient computation budget, we now instead focus on comparing the SFO complexity required for each method to reach a specified value of the full gradient norm during training. We believe this offers a more meaningful and performance-driven evaluation.
 
 ### 2.2 Experimental Design Choices
-We conducted the experiments using the CIFAR-100 dataset and focused on the NSHB optimizer only, while keeping all other training settings consistent with those described in the main paper. This design choice ensures that any observed differences in performance are due to batch size scheduling, rather than other confounding factors such as architecture or training hyperparameters. Specifically, we conducted experiments under the following settings:
+We conducted the experiments using the CIFAR-100 dataset and focused on the NSHB optimizer only, while keeping all other training settings consistent with those described in the main paper. This ensures that performance differences arise solely from batch size scheduling, not from confounding factors such as architecture or hyperparameters. Specifically, we conducted experiments under the following settings:
 
 ## 3. Experimental Settings
 ### 3.1 For Gradient Norm Threshold Evaluation 
@@ -61,4 +61,4 @@ The results of these experiments are summarized in the two tables below.
 ## 5. Conclusion
 These results demonstrate that increasing batch size reaches the same gradient norm threshold using significantly fewer stochastic gradient computations, particularly for lower thresholds. This supports the practical and theoretical relevance of increasing batch size strategies, particularly in realistic nonconvex optimization settings where constant batch size assumptions are often not feasible.
 
-We will incorporate the above findings and discussion into the revised version of the manuscript.
+These findings and discussions will be incorporated into the revised manuscript.
