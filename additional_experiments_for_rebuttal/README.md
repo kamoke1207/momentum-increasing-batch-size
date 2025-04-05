@@ -1,7 +1,7 @@
 This folder contains additional experimental results for the rebuttal.
 
-Fixed: batch size b = 8, Increasing: initial batch size = 8, doubling every 20 epochs
-Fixed: batch size b = 128, Increasing: initial batch size = 128, doubling every 50 epochs
+-Fixed: batch size b = 8, Increasing: initial batch size = 8, doubling every 20 epochs
+-Fixed: batch size b = 128, Increasing: initial batch size = 128, doubling every 50 epochs
 
 The results of these experiments are summarized in the two tables below.
 
@@ -18,8 +18,8 @@ The results of these experiments are summarized in the two tables below.
 | Increasing batch size (initial b=128) | 2,903,808 | 5,061,376 |
 
 
-Fixed: batch size b = 8, Increasing: initial batch size = 8, doubling every 20 epochs
-Fixed: batch size b = 128, Increasing: initial batch size = 128, doubling every 25 epochs
+-Fixed: batch size b = 8, Increasing: initial batch size = 8, doubling every 20 epochs
+-Fixed: batch size b = 128, Increasing: initial batch size = 128, doubling every 25 epochs
 
 The results of these experiments are summarized in the two tables below.
 
