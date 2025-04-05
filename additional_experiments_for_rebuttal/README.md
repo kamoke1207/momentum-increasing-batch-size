@@ -3,10 +3,15 @@ In response to your suggestion that the paper would benefit from a more thorough
 
 While we initially aimed to compare fixed and increasing batch size schedules under the same total gradient computation budget, we now instead focus on comparing the SFO complexity required for each method to reach a specified value of the full gradient norm during training. We believe this provides a more meaningful and performance-oriented evaluation.
 
-We conducted the experiments using the CIFAR-100 dataset and focused on the NSHB optimizer only, while keeping all other training settings consistent with those described in the main paper. Specifically, we conducted experiments under the following settings:
+We conducted experiments under the following settings:
 
-- Fixed: batch size b = 8, Increasing: initial batch size = 8, doubling every 20 epochs
-- Fixed: batch size b = 128, Increasing: initial batch size = 128, doubling every 50 epochs
+- For gradient norm threshold evaluation:
+  - Fixed: batch size b = 8, Increasing: initial batch size = 8, doubling every 20 epochs
+  - Fixed: batch size b = 128, Increasing: initial batch size = 128, doubling every 50 epochs
+
+- For test accuracy threshold evaluation:
+  - Fixed: batch size b = 8, Increasing: initial batch size = 8, doubling every 20 epochs
+  - Fixed: batch size b = 128, Increasing: initial batch size = 128, doubling every 25 epochs
 
 The results of these experiments are summarized in the two tables below.
 
@@ -23,11 +28,6 @@ The results of these experiments are summarized in the two tables below.
 | Increasing batch size (initial b=128) | 2,903,808 | 5,061,376 |
 
 
-- Fixed: batch size b = 8, Increasing: initial batch size = 8, doubling every 20 epochs
-- Fixed: batch size b = 128, Increasing: initial batch size = 128, doubling every 25 epochs
-
-The results of these experiments are summarized in the two tables below.
-
 **Test Accuracy Threshold**
 
 | Method | SFO to reach 70% test accuracy |
@@ -42,4 +42,4 @@ The results of these experiments are summarized in the two tables below.
 
 These results demonstrate that increasing batch size reaches the same gradient norm threshold using significantly fewer stochastic gradient computations, particularly for lower thresholds. This supports the practical and theoretical relevance of increasing batch size strategies, particularly in realistic nonconvex optimization settings where constant batch size assumptions are often not feasible.
 
-We promise to add the above discussion to the main body in the revised manuscript.
+We will incorporate the above findings and discussion into the revised version of the manuscript.
