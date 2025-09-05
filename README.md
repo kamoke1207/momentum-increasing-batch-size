@@ -8,7 +8,7 @@ Meanwhile, practical results showed that the setting of batch size strongly depe
 In this paper, we focus on mini-batch SGDM with constant learning rate and constant momentum weight, which is frequently used to train deep neural networks in practice. 
 The contribution of this paper is showing theoretically that using a constant batch size does not always minimize the expectation of the full gradient norm of the empirical loss in training a deep neural network, whereas using an increasing batch size definitely minimizes it, that is, increasing batch size improves convergence of mini-batch SGDM. 
 We also provide numerical results supporting our analyses, indicating specifically that mini-batch SGDM with an increasing batch size converges to stationary points faster than with a constant batch size, while also reducing computational cost. 
-Python implementations of the optimizers used in the numerical experiments are available at https://anonymous.4open.science/r/momentum-increasing-batch-size-888C/.
+Python implementations of the optimizers used in the numerical experiments are available at https://github.com/iiduka-researches/NSHB_increasing_batchsize_acml25/.
 
 ## Usage
 ### Training on CIFAR-100
